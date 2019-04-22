@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Group
 
+
 from settings import Settings
 from ship import Ship
 import game_functions as gf
@@ -16,7 +17,7 @@ def run_game():
     pygame.init()
     ai_settings = Settings()
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
-    pygame.display.set_caption("Plane_Wars")
+    pygame.display.set_caption("飞机大作战")
     gf.set_bgscreen(ai_settings, screen)
 
     # 创建按钮
@@ -50,6 +51,7 @@ def run_game():
 
     # 开始游戏主循环
     while True:
+
 
         # 监视键盘和鼠标事件
         gf.check_events(ai_settings, screen, ship, bullets, play_button, stats, invaders, scoreboard, mouse_move, musics)

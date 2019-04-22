@@ -3,15 +3,13 @@ import pygame
 import pygame.font
 import random
 from time import sleep
-
 from bullet import Bullet
 from invaders import Invaders
 
 
 def set_bgscreen(ai_settings, screen):
-    ai_settings.bg_image = pygame.image.load_extended('images/蓝天.jpg').convert()
-    ai_settings.bg_image = pygame.transform.scale(ai_settings.bg_image,
-                                                  (ai_settings.screen_width, ai_settings.screen_height))
+    ai_settings.bg_image = pygame.image.load_extended('images/背景2.jpg').convert()
+    ai_settings.bg_image = pygame.transform.scale(ai_settings.bg_image,(ai_settings.screen_width, ai_settings.screen_height))
     screen.blit(ai_settings.bg_image, (0, 0))
 
 
@@ -224,7 +222,7 @@ def game_over(stats, screen):
 
 
 def check_high_score(stats):
-    """检查当前得分是否超过最高风"""
+    """检查当前得分是否超过最高分"""
     if stats.high_score < stats.score:
         stats.high_score = stats.score
 

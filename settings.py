@@ -1,4 +1,6 @@
 import pygame
+import autopy as at
+
 
 
 class Settings:
@@ -9,8 +11,20 @@ class Settings:
         # 更改设置还需要改初始化函数initialize_setting
 
         # 屏幕的设置
-        self.screen_width = 1200
-        self.screen_height = 1000
+        for i in range(3000):
+            try:
+                at.mouse.move(i,0)
+                k=i
+            except ValueError:
+                break
+        for i in range(3000):
+            try:
+                at.mouse.move(k,i)
+                m=i
+            except ValueError:
+                break
+        self.screen_width = k
+        self.screen_height = m
         self.bg_color = (150, 174, 184)
 
         # 飞船设置
